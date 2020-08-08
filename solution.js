@@ -9,7 +9,6 @@ const getCafes = () => {
 var cafes = [];
 getCafes().then((result) => {
   cafes = Array.from(result.cafes);
-  // console.log(cafes[1]);
 });
 
 const getPlaces = () => {
@@ -22,7 +21,6 @@ const getPlaces = () => {
 var places = [];
 getPlaces().then((result) => {
   places = Array.from(result.places);
-  // console.log(places[1]);
 });
 
 function searching() {
@@ -64,7 +62,6 @@ function calc(inp) {
   for (let i = 0; i < cafes.length; i++) {
       if (cafes[i].name.toUpperCase().startsWith(inp) === true) {
           let id1 = cafes[i].location_id;
-          //   console.log('hi:'+inp);
           for (let j = 0; j < places.length; j++) {
               if (places[j].id === id1) {
                   var obj = Object.assign({}, places[j]);
