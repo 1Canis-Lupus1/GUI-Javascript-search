@@ -12,9 +12,24 @@ getCafe().then((val)=>{
   console.log(cafe[0]);
 });
 
+const getPlace=()=>{
+  var api_url="https://raw.githubusercontent.com/debojyoti/places-fake-rest-api/master/places.json";
+  
+  fetch(api_url).then((response)=>{
+    return response.json();
+  });
+}
+
+var places=[];
+getPlace().then((val)=>{
+  places=Array.from(val.places);
+  console.log(places[0]);
+});
+
+
 let input = promt("Enter Cafe Name:");
 input = input.toUpperCase();
-console.log(findCafe(input));
+//console.log(findCafe(input));
 
 function findCafe(inp) {
   Result = [];
