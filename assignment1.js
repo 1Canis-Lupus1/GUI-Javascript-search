@@ -1,3 +1,17 @@
+const getCafe=()=>{
+  var api_add="https://raw.githubusercontent.com/debojyoti/places-fake-rest-api/master/cafes.json";
+  
+  return fetch(api_add).then((response)=>{
+    return response.json();
+  });
+}
+
+var cafe=[];
+getCafe().then((val)=>{
+  cafe=Array.from(val.cafe);
+  console.log(cafe[0]);
+});
+
 let input = promt("Enter Cafe Name:");
 input = input.toUpperCase();
 console.log(findCafe(input));
