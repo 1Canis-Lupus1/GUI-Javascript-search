@@ -29,7 +29,13 @@ getPlaces().then((result) => {
 function searching() {
   let inp = document.getElementById("search").value;
   inp = inp.toUpperCase();
-  //Call calc()
+  var mytable=documnet.getElementById('mytable');
+  //Emptying row
+  mytable.innerHTML='';
+  var solution=calc(inp);
+   for(var i in solution){
+     //Enter new cells
+   }
 }
 
 function calc(inp) {
