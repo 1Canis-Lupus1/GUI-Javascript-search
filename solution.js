@@ -51,9 +51,8 @@ function searching() {
       // Set the properties 
 
       cell1.innerHTML = parseInt(i) + 1;
-      cell2.innerHTML = result[i].street_no;
       cell2.innerHTML = result[i].name;
-      cell3.innerHTML = result[i].locality;
+      cell3.innerHTML = `${result[i].street_no} , ${result[i].locality}`;
       cell4.innerHTML = result[i].postal_code;
       cell5.innerHTML = result[i].lat;
       cell6.innerHTML = result[i].long;
